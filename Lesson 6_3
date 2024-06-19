@@ -1,0 +1,32 @@
+package org.example;
+
+public class Park {
+    String attractionsName;
+    String workingHours;
+    int price;
+
+    public Park(String attractionsName, String workingHours, int price) {
+        this.attractionsName = attractionsName;
+        this.workingHours = workingHours;
+        this.price = price;
+    }
+    
+    public String toString() {
+        return "Attraction " +
+                "Attractions Name='" + attractionsName + '\'' +
+                ", Working Hours='" + workingHours + '\'' +
+                ", Price=" + price + "$";
+    }
+
+    public static void main(String[] args) {
+        Park[] attractions = new Park[3];
+
+        attractions[0] = new Park("Американские горки", "10.00 - 14.15", 5);
+        attractions[1] = new Park("Батуты", "11.20 - 12.20", 2);
+        attractions[2] = new Park("Русская рулетка", "9.00 - 9.01", 1);
+
+        for (Park attraction : attractions) {
+            System.out.println(attraction);
+        }
+    }
+}
