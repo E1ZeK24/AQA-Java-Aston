@@ -1,0 +1,40 @@
+package org.example;
+
+public class Employee {
+    String fullName;
+    String position;
+    String email;
+    long phoneNumber;
+    int salary;
+    int age;
+
+    public Employee(String fullName, String position, String email, long phoneNumber, int salary, int age) {
+        this.fullName = fullName;
+        this.position = position;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+        this.salary = salary;
+        this.age = age;
+    }
+
+    public String toString() {
+        return "Employee " +
+                "fullName='" + fullName + '\'' +
+                ", position='" + position + '\'' +
+                ", email='" + email + '\'' +
+                ", phoneNumber=" + phoneNumber +
+                ", salary=" + salary + "$" +
+                ", age=" + age;
+    }
+
+    public static void main(String[] args) {
+        Employee ivan = new Employee(
+                "Ященко Иван Сергеевич",
+                "AQA JAVA",
+                "ivan.yashchanka18@gmail.com",
+                375336219901L,
+                450,
+                23);
+        System.out.print(ivan);
+    }
+}
